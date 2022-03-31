@@ -9,7 +9,7 @@ public class Praktikum {
         System.out.println("Сколько дней до зарплаты?");
         int daysBeforeSalary = scanner.nextInt();
         
-        Converter converter = new Converter(78.5,88.7,0.75);
+        Converter converter = new Converter(78.5,88.7,0.75,0.17);
         DinnerAdvisor dinnerAdvisor = new DinnerAdvisor();
         ExpensesManager expensesManager = new ExpensesManager();
         
@@ -19,7 +19,7 @@ public class Praktikum {
 
             if (command == 1) {
                 System.out.println("Ваши сбережения: " + moneyBeforeSalary + " RUB");
-                System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - USD, 2 - EUR, 3 - JPY.");
+                System.out.println("В какую валюту хотите конвертировать? Доступные варианты: 1 - USD, 2 - EUR, 3 - JPY, 4 - Тенге.");
                 int currency = scanner.nextInt();
                 converter.convert(moneyBeforeSalary, currency);
             } else if (command == 2) {
